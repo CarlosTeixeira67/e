@@ -1,0 +1,11 @@
+.h1-header{
+  cursor: pointer;
+  margin-left: 2vw;
+  border-bottom: 1px solid transparent;
+  transition: border-bottom-width 0.5s ease;
+  transition: border-bottom-color 0.5s ease;
+}
+.h1-header:hover{
+  border-bottom-width: 1px;
+  border-bottom-color: #000;
+}
