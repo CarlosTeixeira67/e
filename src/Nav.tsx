@@ -1,5 +1,5 @@
-import "./Navigation.css";
 import React, { useState, useEffect } from "react";
+import "./Navigation.css"; // Importe seu arquivo de estilos CSS
 
 const Nav: React.FC = () => {
   const [isMobile, setIsMobile] = useState<boolean>(false);
@@ -24,9 +24,11 @@ const Nav: React.FC = () => {
   const handleNavClick = (event: React.MouseEvent<HTMLAnchorElement>) => {
     event.preventDefault();
     const targetId = event.currentTarget.getAttribute("href");
-    const targetElement = document.querySelector(targetId);
-    if (targetElement) {
-      targetElement.scrollIntoView({ behavior: "smooth", block: "start" });
+    if (targetId !== null) { // Verifica se targetId não é nulo
+      const targetElement = document.querySelector(targetId);
+      if (targetElement) {
+        targetElement.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
     }
   };
 
@@ -39,6 +41,9 @@ const Nav: React.FC = () => {
         display: "flex",
         alignItems: "center",
         paddingLeft: "10px",
+        overflowY: isMobile ? "scroll" : "hidden", // Adiciona overflowY: scroll apenas em dispositivos móveis
+        WebkitOverflowScrolling: "touch", // Ativa o scroll suave em dispositivos iOS
+        maxHeight: isMobile ? "calc(100vh - 100px)" : "auto", // Define a altura máxima apenas em dispositivos móveis
       }}
     >
       <img
@@ -63,17 +68,17 @@ const Nav: React.FC = () => {
         }}
       >
         <li style={{ display: "inline-block", marginRight: "10px" }}>
-          <a href="#story" onClick={handleNavClick}>
+          <a href="#story" onClick={handleNavClick}className="h1-header">
             História
           </a>
         </li>
         <li style={{ display: "inline-block", marginRight: "10px" }}>
-          <a href="#camisas" onClick={handleNavClick}>
+          <a href="#camisas" onClick={handleNavClick}className="h1-header">
             Camisas
           </a>
         </li>
         <li style={{ display: "inline-block", marginRight: "10px" }}>
-          <a href="#contato" onClick={handleNavClick}>
+          <a href="#moletons" onClick={handleNavClick}className="h1-header">
             Moletons
           </a>
         </li>

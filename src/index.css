@@ -15,12 +15,10 @@
 
 a {
   font-weight: 500;
-  color: #646cff;
+  color: #000000;
   text-decoration: inherit;
 }
-a:hover {
-  color: #535bf2;
-}
+
 
 body {
   margin: 0;
@@ -72,32 +70,40 @@ button:focus-visible {
 }
 /* Estilo do scrollbar circular */
 ::-webkit-scrollbar {
-  width: 4px; /* Largura do scrollbar */
-  height: 8px; /* Altura do scrollbar */
+  width: 0.6vh; /* Largura do scrollbar */
+  height: 0.6px; /* Altura do scrollbar */
 }
+/* Adicione esses estilos ao seu arquivo CSS */
+
+/* Para a versão desktop */
+.camisas-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Adicione esses estilos ao seu arquivo CSS */
+
+/* Para a versão desktop */
+.camisas-container {
+  display: flex;
+  justify-content: center;
+}
+
+/* Para a versão mobile */
+@media (max-width: 768px) {
+  .camisas-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .camisa-item {
+    margin-bottom: 10px; /* Ajuste o valor conforme necessário */
+  }
+}
+
 
 /* Estilo do thumb (círculo) */
 ::-webkit-scrollbar-thumb {
   background: rgb(0, 0, 0); /* Cor do thumb (círculo) */
-  border-radius: 4px; /* Raio da borda do thumb (metade da altura para criar um círculo) */
+  border-radius: 8px; /* Raio da borda do thumb (metade da altura para criar um círculo) */
 }
 
-/* Estilo do thumb (círculo) ao passar o mouse */
-@media screen and (max-width: 768px) {
-  /* Estilo do scrollbar circular para dispositivos móveis */
-  ::-webkit-scrollbar {
-    width: 4px; /* Largura do scrollbar */
-    height: 8px; /* Altura do scrollbar */
-  }
-
-  /* Estilo do thumb (círculo) para dispositivos móveis */
-  ::-webkit-scrollbar-thumb {
-    background: rgb(0, 0, 0); /* Cor do thumb (círculo) */
-    border-radius: 4px; /* Raio da borda do thumb (metade da altura para criar um círculo) */
-  }
-
-  /* Estilo do thumb (círculo) ao passar o mouse para dispositivos móveis */
-  ::-webkit-scrollbar-thumb:hover {
-    background: darkblue; /* Cor do thumb (círculo) ao passar o mouse */
-  }
-}
