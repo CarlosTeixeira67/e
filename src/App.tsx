@@ -1,12 +1,12 @@
 import React from "react";
 import Nav from "./Nav";
 import logo from "./assets/corinthians.png"; // Importe a imagem corretamente
-import Branca from "./assets/branca.webp";
-import Preto from "./assets/preta.avif";
-import Azul from './assets/azul.avif'
-import Blusa1 from './assets/BLUSA1.avif'
-import Blusa2 from './assets/BLUSA2.avif'
-import Blusa3 from './assets/BLUSA3.avif'
+import Branca from "./assets/branca.png";
+import Preto from "./assets/preta.png";
+import Azul from './assets/azul.png'
+import Blusa1 from './assets/BLUSA1.png'
+import Blusa2 from './assets/BLUSA2.png'
+import Blusa3 from './assets/BLUSA3.png'
 const App: React.FC = () => {
   return (
     <div>
