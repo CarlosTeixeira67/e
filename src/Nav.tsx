@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./Navigation.css"; // Importe seu arquivo de estilos CSS
-import Logo from './assets/corinthians (1).jpg'
+import Logo from './assets/C0RINTHIANS.png'
 const Nav: React.FC = () => {
   const [isMobile, setIsMobile] = useState<boolean>(false);
 
