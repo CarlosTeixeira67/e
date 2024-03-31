@@ -47,7 +47,7 @@ const Nav: React.FC = () => {
       }}
     >
       <img
-        src="src/assets/corinthians.png"
+        src="src/assets/C0RINTHIANS.png"
         alt="Logo"
         style={{ marginRight: "10px", height: "40px" }}
       />

@@ -13,7 +13,17 @@ const App: React.FC = () => {
       <Nav />
       <div style={{ textAlign: "center" }}>
         <figure>
-          <img src={logo} alt="Logo" />
+        <img 
+  src={logo} 
+  alt="Logo" 
+  style={{ 
+    marginRight: "2px", 
+    height: "auto",  /* Altura automática para manter a proporção */
+    maxWidth: "100%", /* Largura máxima de 100% do contêiner */
+    maxHeight: "100vh" /* Altura máxima de 100% da altura da viewport */
+  }}
+/>
+
         </figure>
       </div>
 
