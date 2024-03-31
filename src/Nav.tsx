@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./Navigation.css"; // Importe seu arquivo de estilos CSS
-
+import Logo from './assets/corinthians (1).jpg'
 const Nav: React.FC = () => {
   const [isMobile, setIsMobile] = useState<boolean>(false);
 
@@ -46,11 +46,12 @@ const Nav: React.FC = () => {
         maxHeight: isMobile ? "calc(100vh - 100px)" : "auto", // Define a altura máxima apenas em dispositivos móveis
       }}
     >
-      <img
-        src="src/assets/corinthians (1).jpg"
-        alt="Logo"
-        style={{ marginRight: "10px", height: "40px" }}
-      />
+    <img
+  src={Logo}
+  alt="Logo"
+  style={{ marginRight: "10px", height: "40px" }}
+/>
+
       <span style={{ marginRight: "auto" }}>
         <h4 className="h1-header" style={{ margin: 0 }}>
           {" "}
